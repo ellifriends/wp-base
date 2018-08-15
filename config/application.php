@@ -2,7 +2,7 @@
 
 // Directory settings.
 $root_dir = dirname( __DIR__ );
-$webroot_dir = $root_dir . '/web';
+$webroot_dir = $root_dir . '/public';
 
 // Expose global env() function from oscarotero/env.
 Env::init();
@@ -35,9 +35,9 @@ if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_P
 }
 
 // Custom Content Directory.
-define( 'CONTENT_DIR', '/app' );
-define( 'WP_CONTENT_DIR', $webroot_dir . CONTENT_DIR );
-define( 'WP_CONTENT_URL', WP_HOME . CONTENT_DIR );
+define( 'CONTENT_DIR', '' );
+define( 'WP_CONTENT_DIR', $webroot_dir );
+define( 'WP_CONTENT_URL', WP_HOME );
 
 // Database settings.
 define( 'DB_NAME', env( 'DB_NAME' ) );
@@ -63,7 +63,7 @@ define( 'AUTOMATIC_UPDATER_DISABLED', env( 'AUTOMATIC_UPDATER_DISABLED' ) ?: tru
 define( 'DISABLE_WP_CRON', env( 'DISABLE_WP_CRON' ) ?: false );
 define( 'DISALLOW_FILE_MODS', env( 'DISALLOW_FILE_MODS' ) ?: true );
 define( 'WP_DEFAULT_THEME', env( 'WP_THEME' ) ?: '' );
-// define( 'WP_ALLOW_MULTISITE', env( 'WP_ALLOW_MULTISITE' ) ?: false );
+define( 'WP_ALLOW_MULTISITE', env( 'WP_ALLOW_MULTISITE' ) ?: false );
 
 // Bootstrap WordPress.
 if ( ! defined( 'ABSPATH' ) ) {

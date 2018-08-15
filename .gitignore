@@ -1,11 +1,47 @@
-.DS_Store
-.env
-.idea
-.vagrant
-Homestead.json
-Homestead.yaml
-node_modules
-npm-debug.log
-Vagrantfile
-vendor
+# Application
+public/upgrade
+public/uploads/*
+!public/uploads/.gitkeep
+public/cache/
+public/cache
+public/db.php
 public/wp
+
+# WP-CLI
+db-sync
+sql-dump-*.sql
+*.sql
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Vendor (e.g. Composer)
+vendor/*
+!vendor/.gitkeep
+
+# Node Package Manager
+node_modules
+
+# Vagrant
+bin
+.vagrant
+
+# Mac OS X
+.DS_Store
+
+# PHPStorm
+.idea
+
+# Testing
+tmp
+
+# Capistrano
+log
+
+# Bundle
+.bundle
+
+# Profiler
+.prof
