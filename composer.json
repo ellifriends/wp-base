@@ -1,0 +1,38 @@
+{
+  "name": "ellifriends/wp-base",
+  "description": "",
+  "license": "MIT",
+  "require": {
+    "php": "^7.1.3",
+    "johnpbloch/wordpress": "^4.9.8",
+    "oscarotero/env": "^1.1",
+    "roots/wp-password-bcrypt": "^1.0",
+    "vlucas/phpdotenv": "^2.5"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "scripts": {
+    "post-root-package-install": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ]
+  },
+  "extra": {
+    "installer-paths": {
+      "public/mu-plugins/{$name}": [
+        "type:wordpress-muplugin"
+      ],
+      "public/plugins/{$name}": ["type:wordpress-plugin"],
+      "public/themes/{$name}": ["type:wordpress-theme"]
+    },
+    "wordpress-install-dir": "public/wp"
+  },
+  "config": {
+    "preferred-install": "dist",
+    "optimize-autoloader": true,
+    "sort-packages": true
+  }
+}
