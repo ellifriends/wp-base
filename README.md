@@ -1,4 +1,4 @@
-# Base
+# Boilerplate
 
 > Standard WordPress layout for Elli & Friends projects.
 
