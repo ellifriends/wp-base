@@ -4,9 +4,10 @@
   "license": "MIT",
   "require": {
     "php": "^7.1.3",
-    "ellifriends/wp-ef-foundation": "*",
+    "ellifriends/wp-ef-foundation": "dev-master",
     "johnpbloch/wordpress": "^4.9.8",
     "oscarotero/env": "^1.1",
+    "roots/soil": "^3.7",
     "roots/wp-password-bcrypt": "^1.0",
     "vlucas/phpdotenv": "^2.5"
   },
@@ -24,7 +25,8 @@
   "extra": {
     "installer-paths": {
       "public/mu-plugins/{$name}": [
-        "type:wordpress-muplugin"
+        "type:wordpress-muplugin",
+        "roots/soil"
       ],
       "public/plugins/{$name}": ["type:wordpress-plugin"],
       "public/themes/{$name}": ["type:wordpress-theme"]

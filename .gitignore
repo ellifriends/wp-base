@@ -1,4 +1,6 @@
 # Application
+public/mu-plugins/*
+public/plugins/*
 public/upgrade
 public/uploads/*
 !public/uploads/.gitkeep
