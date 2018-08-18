@@ -5,7 +5,7 @@
 ## Setup instructions
 
 ```
-composer create-project ellifriends/wp-boilerplate
+composer create-project ellifriends/wp-boilerplate -s dev
 ```
 
 ## Structure
