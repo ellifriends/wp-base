@@ -37,3 +37,7 @@ Run `composer require roots/multisite-url-fixer` to install the package. It will
 
 - [WordPress theme handbook](https://developer.wordpress.org/themes/)
 - [WordPress plugin handbook](https://developer.wordpress.org/plugins/)
+
+## License
+
+MIT © Elli & Friends
