@@ -1,13 +1,13 @@
 # Application
-public/mu-plugins/*
-public/plugins/*
-public/upgrade
-public/uploads/*
-!public/uploads/.gitkeep
-public/cache/
-public/cache
-public/db.php
-public/wp
+web/app/mu-plugins/*
+web/app/plugins/*
+web/app/upgrade
+web/app/uploads/*
+!web/app/uploads/.gitkeep
+web/app/cache/
+web/app/cache
+web/app/db.php
+web/wp
 
 # WP-CLI
 db-sync

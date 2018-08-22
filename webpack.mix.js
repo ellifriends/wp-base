@@ -16,7 +16,7 @@ require('dotenv').config();
 const theme = process.env.WP_THEME;
 
 mix.setResourceRoot('../');
-mix.setPublicPath(`public/themes/${theme}/assets`);
+mix.setPublicPath(`web/app/themes/${theme}/assets`);
 
 mix.js('resources/scripts/app.js', 'scripts');
 mix.sass('resources/styles/app.scss', 'styles');

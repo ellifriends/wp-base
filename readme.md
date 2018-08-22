@@ -10,17 +10,18 @@ composer create-project ellifriends/wp-boilerplate -s dev
 
 ## Structure
 
-```
-| config          - WordPress and environment configurations
-| public          - Web root and WordPress content directory
- -| index.php     - WordPress view bootstrapper
-  | mu-plugins    - Must use plugins
-  | plugins       - Plugins
-  | themes        - Themes
-  | uploads       - Uploads
-  | wp            - WordPress core (never edit)
-  | wp-config.php - Required by WordPress (never edit)
-| resources - CSS and JavaScript pre-processors using Laravel Mix
+```markdown
+| config              # - WordPress and environment configurations
+| web                 # - Web root and WordPress content directory
+|--| app              # - Application folder  
+|  |--| index.php     # - WordPress view bootstrapper
+|  |  | mu-plugins    # - Must use plugins
+|  |  | plugins       # - Plugins
+|  |  | themes        # - Themes
+|  |  | uploads       # - Uploads
+|  | wp               # - WordPress core (never edit)
+|  | wp-config.php    # - Required by WordPress (never edit)
+| resources           # - CSS and JavaScript pre-processors using Laravel Mix
 ```
 
 ## Configuration

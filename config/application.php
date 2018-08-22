@@ -2,7 +2,7 @@
 
 // Directory settings.
 $root_dir = dirname( __DIR__ );
-$webroot_dir = $root_dir . '/public';
+$webroot_dir = $root_dir . '/web';
 
 // Expose global env() function from oscarotero/env.
 Env::init();
@@ -35,9 +35,9 @@ if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_P
 }
 
 // Custom Content Directory.
-define( 'CONTENT_DIR', '' );
-define( 'WP_CONTENT_DIR', $webroot_dir );
-define( 'WP_CONTENT_URL', WP_HOME );
+define( 'CONTENT_DIR', '/app' );
+define( 'WP_CONTENT_DIR', $webroot_dir . CONTENT_DIR );
+define( 'WP_CONTENT_URL', WP_HOME . CONTENT_DIR );
 
 // Database settings.
 define( 'DB_NAME', env( 'DB_NAME' ) );
