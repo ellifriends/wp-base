@@ -26,7 +26,7 @@ composer create-project ellifriends/wp-boilerplate -s dev
 
 ## Configuration
 
-Modify environment configuration in `.env` after your need. It's important to set `WP_THEME` variable to your theme directory name so Laravel mix builds works.
+Modify environment configuration in `.env` after your need.
 
 ## Multisite URL fixer
 
