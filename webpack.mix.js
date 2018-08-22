@@ -1,19 +1,15 @@
 const mix = require('laravel-mix');
+const { readdirSync, statSync } = require('fs');
+const { join } = require('path');
 
 require('dotenv').config();
 
-/*
- |--------------------------------------------------------------------------
- | Mix Asset Management
- |--------------------------------------------------------------------------
- |
- | Mix provides a clean, fluent API for defining some Webpack build steps
- | for your Laravel application. By default, we are compiling the Sass
- | file for your application, as well as bundling up your JS files.
- |
- */
+const dir = p => {
+  const dirs = readdirSync(p).filter(f => statSync(join(p, f)).isDirectory())
+  return dirs.length ? dirs[0] : '';
+};
 
-const theme = process.env.WP_THEME;
+const theme = process.env.WP_THEME ? process.env.WP_THEME : dir('web/app/themes');
 
 mix.setResourceRoot('../');
 mix.setPublicPath(`web/app/themes/${theme}/assets`);
