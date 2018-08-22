@@ -1,6 +1,6 @@
 {
   "name": "ellifriends/wp-boilerplate",
-  "description": "",
+  "description": "Standard WordPress layout for Elli & Friends projects",
   "license": "MIT",
   "require": {
     "php": "^7.1.3",
